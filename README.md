@@ -1,73 +1,56 @@
-# React + TypeScript + Vite
+### 🍔 DelivItau
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+✨ Experiência de Delivery Otimizada
+O DelivItau é uma aplicação web de delivery projetada para a cidade de Itaú. Nosso foco é oferecer uma navegação intuitiva, rápida e eficiente, conectando os usuários aos melhores estabelecimentos locais. A aplicação permite que o usuário navegue por cardápios, adicione itens ao carrinho e finalize seus pedidos de forma simples e segura.
 
-Currently, two official plugins are available:
+📌 Tecnologias & Arquitetura
+O projeto adota uma arquitetura serverless moderna, garantindo alta escalabilidade, performance e custos otimizados (conforme planejado).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Frontend (User Interface)
+⚛️ React & 📘 TypeScript: Combinação robusta para desenvolvimento de componentes e tipagem segura.
 
-## React Compiler
+⚡ Vite: Ferramenta de build que proporciona um ambiente de desenvolvimento ultrarrápido.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+🎨 Tailwind CSS: Estilização utilitária para um design totalmente responsivo e limpo.
 
-## Expanding the ESLint configuration
+Backend (Arquitetura Serverless AWS)
+☁️ AWS Amplify: Hospedagem e deployment contínuo (CI/CD) do frontend.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+🔌 API Gateway & AWS Lambda: Backend sem servidor para toda a lógica de negócios (processamento de pedidos, promoções, etc.).
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+💾 Amazon DynamoDB: Banco de dados NoSQL de alta performance para dados transacionais (pedidos, cardápios).
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+🖼️ Amazon S3: Armazenamento escalável e de baixo custo para todas as imagens de cardápio e banners promocionais.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+🔒 Amazon Cognito: Gerenciamento seguro de usuários, autenticação e autorização.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+🚀 Como Começar (Desenvolvimento Local)
+Siga os passos para configurar e rodar o projeto em sua máquina.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+🔧 Pré-requisitos
+Certifique-se de ter instalado:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Node.js (versão 18+ ou superior)
+
+npm ou yarn
+
+📥 Instalação
+Clone o repositório e navegue até a pasta do projeto:
+
+git clone [https://github.com/IVERTON-EMIQUISON/DelivItau-web](https://github.com/IVERTON-EMIQUISON/DelivItau-web)
+cd delivitau
+
+Instale as dependências:
+
+npm install
+# ou yarn install
+
+▶️ Rodando o Projeto
+Inicie o ambiente de desenvolvimento:
+
+npm run dev
+# ou yarn dev
+
+Abra seu navegador em: http://localhost:5173/
+
+O projeto será carregado e qualquer alteração no código será refletida imediatamente (hot-reload).
