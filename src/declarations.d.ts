@@ -1,0 +1,9 @@
+declare module '*.jsx';
+declare module '*.tsx';
+declare module '*.js';
+declare module '*.ts';
+declare module '*.css';
+declare module '*.png';
+declare module '*.jpg';
+declare module '*.svg';
+declare module '*.json';

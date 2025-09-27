@@ -1,10 +1,12 @@
-import React from 'react';
+
 import { Routes, Route } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
-import HomeScreen from '@/pages/HomeScreen';
-import RestaurantScreen from '@/pages/RestaurantScreen';
-import { Toaster } from '@/components/ui/toaster';
-import '@/App.css';
+import { Toaster } from 'react-hot-toast';
+
+
+import HomeScreen from "@/pages/HomeScreen";
+import RestaurantScreen from "@/pages/RestaurantScreen";
+import "@/App.css";
 function App() {
   return (
     <>
