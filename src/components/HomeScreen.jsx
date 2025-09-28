@@ -7,7 +7,7 @@ import { Checkbox } from '@/components/ui/checkbox';
 import { Label } from '@/components/ui/label';
 import { useToast } from '@/components/ui/use-toast';
 import { Link } from 'react-router-dom';
-
+import '../App.css';
 const HomeScreen = () => {
   const { toast } = useToast();
   const [currentBanner, setCurrentBanner] = useState(0);
@@ -116,10 +116,10 @@ const HomeScreen = () => {
         <motion.section initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6 }}>
           <h2 className="text-2xl font-bold text-gray-800 mb-6">Estabelecimentos</h2>
           <AnimatePresence>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <div className="container">
               {filteredEstabelecimentos.map((estabelecimento, index) => (
                 <motion.div key={estabelecimento.id} layout initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.8 }} transition={{ delay: 0.05 * index }} whileHover={{ y: -5 }}>
-                  <Link to={`/restaurant/${estabelecimento.id}`} className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all cursor-pointer overflow-hidden group block">
+                  <Link to={`/restaurant/${estabelecimento.id}`} className="item-card">
                     <div className="relative">
                       <img src={estabelecimento.imagem} alt={estabelecimento.nome} className="w-full h-40 object-cover group-hover:scale-105 transition-transform duration-300" />
                       {estabelecimento.promocao && (<div className="absolute top-3 left-3 bg-red-500 text-white px-2 py-1 rounded-full text-xs font-semibold flex items-center gap-1"><Tag className="h-3 w-3" />Promoção</div>)}

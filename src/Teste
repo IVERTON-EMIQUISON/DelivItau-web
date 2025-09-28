@@ -1,8 +1,0 @@
-import React from 'react';
-import HomeScreenComponent from './Teste';
-
-const Teste = () => {
-  return <HomeScreenComponent />;
-};
-
-export default Teste;
